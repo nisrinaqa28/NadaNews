@@ -96,7 +96,7 @@ public class NewsDetailActivity extends AppCompatActivity implements AppBarLayou
             author = "";
         }
 
-        time.setText(mSource + author + " \u2022 " + Utils.DateToTimeFormat(mDate));
+        time.setText(Utils.DateToTimeFormat(mDate));
 
         btnWebView = findViewById(R.id.btnWeb);
         btnWebView.setOnClickListener(new View.OnClickListener() {
