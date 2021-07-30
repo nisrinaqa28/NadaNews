@@ -38,7 +38,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayout.OnRefreshListener{
 
-    public static final String API_KEY = "";
+    public static final String API_KEY = "Your Key";
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
     }
 
-    public void LoadJson(final String keyword){
+    public boolean LoadJson(final String keyword){
 
         errorLayout.setVisibility(View.GONE);
         swipeRefreshLayout.setRefreshing(true);
@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
             }
         });
 
+        return false;
     }
 
     private void initListener(){

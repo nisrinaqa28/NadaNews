@@ -20,7 +20,7 @@ public class WebView extends AppCompatActivity {
         initWebView(mUrl);
     }
 
-    private void initWebView(String url){
+    void initWebView(String url){
         android.webkit.WebView webView = findViewById(R.id.webView);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
